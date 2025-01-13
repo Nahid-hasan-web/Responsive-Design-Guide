@@ -5,39 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Design Guide</title>
   <style>
+    /* General Styles */
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 20px;
+      background-color: #F5EFFF;
+      color: #000; /* Black text */
       line-height: 1.6;
     }
+
     h1, h2 {
-      color: #333;
+      text-align: center;
     }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 20px 0;
+      color: #000;
+    }
+
+    /* Table Styles */
+    .responsive-table {
+      overflow-x: auto;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #FFF; /* White table background */
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
     }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
+
     th, td {
-      padding: 10px;
+      padding: 12px 16px;
       text-align: left;
+      font-size: 15px;
     }
+
     th {
-      background-color: #f4f4f4;
+      background-color: #CDC1FF; /* Header color */
+      color: #000;
+      font-weight: bold;
     }
-    .responsive-table {
-      overflow-x: auto;
+
+    td {
+      color: #000;
     }
+
+    /* Alternate row colors */
+    tbody tr:nth-child(even) {
+      background-color: #F5EFFF; /* Light purple for alternate rows */
+    }
+
+    tbody tr:hover {
+      background-color: #CDC1FF; /* Darker purple on hover */
+      color: #000;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Scrollbar for overflow */
+    .responsive-table::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .responsive-table::-webkit-scrollbar-thumb {
+      background: #CDC1FF;
+      border-radius: 10px;
+    }
+
+    /* Button Styling */
+    button {
+      padding: 12px 20px;
+      background-color: #CDC1FF;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #B5A7E6; /* Slightly darker shade */
+    }
+
+    /* Responsive Styles */
     @media (max-width: 480px) {
       body {
         padding: 10px;
       }
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
       th, td {
         font-size: 14px;
+      }
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   </style>
@@ -184,6 +272,5 @@
       </tbody>
     </table>
   </div>
-
 </body>
 </html>
