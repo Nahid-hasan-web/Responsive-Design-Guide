@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .responsive-table {
+      overflow-x: auto;
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      th, td {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Design Guide</h1>
+
+  <!-- Table: Font Sizes -->
+  <h2>Font Sizes for Headings and Paragraphs</h2>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Mobile</th>
+          <th>Tablet</th>
+          <th>Desktop</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Main Heading (H1)</td>
+          <td>28px - 32px</td>
+          <td>36px - 42px</td>
+          <td>48px - 56px</td>
+        </tr>
+        <tr>
+          <td>Subheading (H2)</td>
+          <td>22px - 28px</td>
+          <td>28px - 32px</td>
+          <td>36px - 42px</td>
+        </tr>
+        <tr>
+          <td>Paragraph (P)</td>
+          <td>14px - 16px</td>
+          <td>16px - 18px</td>
+          <td>18px - 20px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Table: Buttons -->
+  <h2>Buttons</h2>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Mobile</th>
+          <th>Tablet</th>
+          <th>Desktop</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Font Size</td>
+          <td>14px</td>
+          <td>16px</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>Padding</td>
+          <td>8px 16px</td>
+          <td>10px 20px</td>
+          <td>12px 24px</td>
+        </tr>
+        <tr>
+          <td>Width</td>
+          <td>Auto or 120px</td>
+          <td>Auto or 160px</td>
+          <td>Auto or 200px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Table: Input Fields -->
+  <h2>Input Fields</h2>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Mobile</th>
+          <th>Tablet</th>
+          <th>Desktop</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Font Size</td>
+          <td>14px</td>
+          <td>16px</td>
+          <td>16px</td>
+        </tr>
+        <tr>
+          <td>Padding</td>
+          <td>8px 12px</td>
+          <td>10px 16px</td>
+          <td>12px 20px</td>
+        </tr>
+        <tr>
+          <td>Width</td>
+          <td>100% or max 320px</td>
+          <td>100% or max 400px</td>
+          <td>100% or max 480px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Table: Section and Global Spacing -->
+  <h2>Section and Global Spacing</h2>
+  <div class="responsive-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Mobile</th>
+          <th>Tablet</th>
+          <th>Desktop</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Margin</td>
+          <td>16px</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>Padding</td>
+          <td>16px</td>
+          <td>24px</td>
+          <td>32px</td>
+        </tr>
+        <tr>
+          <td>Max Width</td>
+          <td>100%</td>
+          <td>Max 720px</td>
+          <td>Max 1200px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
