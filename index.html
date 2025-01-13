@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Design Guide</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <style>
     /* General Styles */
     body {
@@ -11,7 +12,7 @@
       margin: 0;
       padding: 20px;
       background-color: #F5EFFF;
-      color: #000; /* Black text */
+      color: #000;
       line-height: 1.6;
     }
 
@@ -37,8 +38,7 @@
       margin-bottom: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      background-color: #FFF; /* White table background */
-      animation: fadeIn 0.8s ease-in-out;
+      background-color: #FFF;
     }
 
     table {
@@ -55,7 +55,7 @@
     }
 
     th {
-      background-color: #CDC1FF; /* Header color */
+      background-color: #CDC1FF;
       color: #000;
       font-weight: bold;
     }
@@ -64,13 +64,12 @@
       color: #000;
     }
 
-    /* Alternate row colors */
     tbody tr:nth-child(even) {
-      background-color: #F5EFFF; /* Light purple for alternate rows */
+      background-color: #F5EFFF;
     }
 
     tbody tr:hover {
-      background-color: #CDC1FF; /* Darker purple on hover */
+      background-color: #CDC1FF;
       color: #000;
       transition: background-color 0.3s ease;
     }
@@ -98,35 +97,23 @@
     }
 
     button:hover {
-      background-color: #B5A7E6; /* Slightly darker shade */
+      background-color: #B5A7E6;
     }
 
-    /* Responsive Styles */
-    @media (max-width: 480px) {
-      body {
-        padding: 10px;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      th, td {
-        font-size: 14px;
-      }
+    /* PDF Button */
+    .pdf-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #CDC1FF;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Fade-in Animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .pdf-button:hover {
+      background-color: #B5A7E6;
     }
   </style>
 </head>
@@ -272,5 +259,27 @@
       </tbody>
     </table>
   </div>
+
+  <!-- Download PDF Button -->
+  <button class="pdf-button" onclick="downloadPDF()">Download as PDF</button>
+
+  <script>
+    function downloadPDF() {
+      const element = document.body;
+      const options = {
+        margin: 1,
+        filename: 'Responsive_Design_Guide.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+        html2canvas: {
+          useCORS: true,
+          allowTaint: false,
+        }
+      };
+
+      html2pdf().set(options).from(element).save();
+    }
+  </script>
 </body>
 </html>
